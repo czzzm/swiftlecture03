@@ -24,5 +24,20 @@ class ViewController: UIViewController {
         button.setTitle("OK", for: UIControl.State.normal)
     }
     
+    @IBOutlet weak var touchView: UIView!
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touchesBegan")
+        if let touch = touches.first{
+            let loc = touch.location(in: self.touchView)
+    
+       print("\( loc )")
+            if( self.touchView.frame.contains(loc)){
+                self.touchView.backgroundColor = UIColor.red}
+            else{ self.touchView.backgroundColor = UIColor.blue}
+        }
+    }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touchesEnded")
+    }
 }
 
