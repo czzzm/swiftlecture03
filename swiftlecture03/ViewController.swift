@@ -12,7 +12,9 @@ class ViewController: UIViewController {
   
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var btnConfirm: UIButton!
-   
+    @IBOutlet weak var switchStatus: UISwitch!
+    @IBOutlet weak var scoreSlider: UISlider!
+    @IBOutlet weak var addScoreStepper: UIStepper!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,20 +26,14 @@ class ViewController: UIViewController {
         button.setTitle("OK", for: UIControl.State.normal)
     }
     
-    @IBOutlet weak var touchView: UIView!
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touchesBegan")
-        if let touch = touches.first{
-            let loc = touch.location(in: self.touchView)
+    @IBAction func score(_ sender: Any) {
+     print("\(addScoreStepper.value)")
+scoreSlider.setValue(Float(addScoreStepper.value), animated: false)
+    }
     
-       print("\( loc )")
-            if( self.touchView.frame.contains(loc)){
-                self.touchView.backgroundColor = UIColor.red}
-            else{ self.touchView.backgroundColor = UIColor.blue}
-        }
-    }
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touchesEnded")
-    }
+    
 }
+
+
+
 
