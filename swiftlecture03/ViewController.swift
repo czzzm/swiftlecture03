@@ -20,6 +20,7 @@ class ViewController: UIViewController {
 
     @IBAction func btnConfirmClicked(_ sender: Any) {
         lbName.text = "zzm"
+        
     }
     
 }
