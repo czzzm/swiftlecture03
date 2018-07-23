@@ -20,7 +20,8 @@ class ViewController: UIViewController {
 
     @IBAction func btnConfirmClicked(_ sender: Any) {
         lbName.text = "zzm"
-        
+        let button = sender as! UIButton;
+        button.setTitle("OK", for: UIControl.State.normal)
     }
     
 }
