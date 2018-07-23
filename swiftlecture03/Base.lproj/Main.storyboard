@@ -32,6 +32,9 @@
                                     <constraint firstAttribute="height" constant="30" id="bwf-v3-Pxt"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btnConfirmClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GzW-o4-Fm0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,6 +48,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btnConfirm" destination="OvI-M6-alP" id="dbr-sr-CvE"/>
+                        <outlet property="lbName" destination="oZM-Bm-BdP" id="q63-s9-q7p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
